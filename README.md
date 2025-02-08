@@ -10,7 +10,7 @@ ask_a_pdf_api/
 │   ├── Dockerfile
 │   ├── requirements.txt
 │   ├── agent.py
-│   ├── uploads/  # Directory for storing PDF files
+│   ├── uploads/  
 ```
 
 ## Description
@@ -49,7 +49,7 @@ This project is a Flask-based API that allows users to upload PDFs, query stored
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-##Visal API Overview
+## Visal API Overview
 
 ![alt text](https://github.com/syntaxai-lab/ask_a_pdf_api/blob/main/Screenshot%202025-02-05%20at%207.27.02%E2%80%AFPM.png?raw=true)
 
