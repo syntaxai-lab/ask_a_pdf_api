@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
 from flask_restful import Api, Resource
 from pymongo import MongoClient
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import torch
 
 # Api setup
 app = Flask(__name__)
@@ -10,6 +12,16 @@ api = Api(app)
 client = MongoClient("mongodb://localhost:27017/")
 db = client["QA_database"]
 collection = db[{"QA_collection"}]
+
+# model details
+MODEL_NAME = "mistralai/Mistral-7B-v1.1"
+tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+model = AutoModelForCausalLM.from_pretrained(MODEL_NAME, torch_dtype=torch)
+
+
+# helper func
+def ret_json(status, message, data=None):
+    return jsonify({"status": status, "message": message, "data": data})
 
 
 class Ask():
