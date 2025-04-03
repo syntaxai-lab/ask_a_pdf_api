@@ -24,7 +24,7 @@ This project is a Flask-based API that allows users to upload PDFs, query stored
 ### Running the Application
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/ask_a_pdf_api.git
+   git clone https://github.com/yourusername/ask_a_pdf_api.git](https://github.com/syntaxai-lab/ask_a_pdf_api.git
    cd ask_a_pdf_api
    ```
 2. Build and start the containers:
